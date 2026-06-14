@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://cxbqdr082qde2"]
 
-[node name="WorldItem" type="Node3D" unique_id=858186536]
+[ext_resource type="Script" uid="uid://hf54l828w5b3" path="res://scripts/world_item.gd" id="1_p6gga"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p6gga"]
+size = Vector3(0.4, 0.4, 0.4)
+
+[sub_resource type="SphereMesh" id="SphereMesh_p6gga"]
+
+[node name="WorldItem" type="StaticBody3D" unique_id=1851741562]
+script = ExtResource("1_p6gga")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1085439403]
+shape = SubResource("BoxShape3D_p6gga")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1828840795]
+mesh = SubResource("SphereMesh_p6gga")
+
+[node name="Label3D" type="Label3D" parent="." unique_id=847898327]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+billboard = 1

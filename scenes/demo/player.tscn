@@ -1,3 +1,21 @@
 [gd_scene format=3 uid="uid://cfrssv3edx466"]
 
+[ext_resource type="Script" uid="uid://1xaequacabqw" path="res://scripts/player.gd" id="1_ceg02"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7em0w"]
+radius = 0.4
+height = 1.8
+
 [node name="Player" type="CharacterBody3D" unique_id=1209915636]
+script = ExtResource("1_ceg02")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=450232853]
+shape = SubResource("CapsuleShape3D_7em0w")
+
+[node name="Head" type="Node3D" parent="." unique_id=1527553568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head" unique_id=738456936]
+
+[node name="InteractRay" type="RayCast3D" parent="Head/Camera3D" unique_id=1360873566]
+target_position = Vector3(0, 0, -2.5)
