@@ -47,3 +47,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0756, 0.99999976, -1.088990
 layer = 0
 
 [node name="Hud" parent="HUDLayer" unique_id=439521940 instance=ExtResource("4_8hyuk")]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=475038576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.984587, 0, -4.2240906)
+use_collision = true
+size = Vector3(4.5595703, 1, 12.876648)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D" unique_id=1943810229]
+transform = Transform3D(-0.017382624, 0.9998489, 0, -0.9998489, -0.017382624, 0, 0, 0, 1, -2.051334, 3.3849068, -0.09984112)
+size = Vector3(6.080078, 1, 12.876648)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D/CSGBox3D" unique_id=1216028660]
+transform = Transform3D(0.032213204, 0.9994832, 0, -0.9994832, 0.032213204, 0, 0, 0, 1, -3.1734, 3.039863, -0.18771505)
+size = Vector3(6.8549805, 1, 12.876648)
