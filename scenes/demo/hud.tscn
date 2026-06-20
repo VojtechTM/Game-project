@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://chm1hykyhcbac"]
+
+[ext_resource type="Script" uid="uid://m7iyewj4j3fl" path="res://scripts/hud.gd" id="1_duh68"]
+
+[node name="Hud" type="CanvasLayer" unique_id=439521940]
+script = ExtResource("1_duh68")
+
+[node name="Control" type="Control" parent="." unique_id=1793377980]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1149.0
+offset_bottom = 646.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="Crosshair" type="Label" parent="Control" unique_id=2055579234]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="BottomLeft" type="VBoxContainer" parent="Control" unique_id=1505806487]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_top = -54.0
+offset_right = 216.0
+grow_vertical = 0
+
+[node name="HealthBar" type="ProgressBar" parent="Control/BottomLeft" unique_id=786826387]
+custom_minimum_size = Vector2(200, 20)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="Control/BottomLeft" unique_id=1606705125]
+layout_mode = 2
+text = "HP: 100/100"
+
+[node name="BottomRight" type="VBoxContainer" parent="Control" unique_id=987872108]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -56.0
+offset_top = -40.0
+offset_right = -16.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="AmmoLabel" type="Label" parent="Control/BottomRight" unique_id=1112205737]
+layout_mode = 2
+text = "30 / 30"
+horizontal_alignment = 2
+
+[node name="ReloadLabel" type="Label" parent="Control/BottomRight" unique_id=1080028403]
+visible = false
+layout_mode = 2
+text = "Přebíjení"
+horizontal_alignment = 2

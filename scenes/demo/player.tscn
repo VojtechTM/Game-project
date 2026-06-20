@@ -6,6 +6,9 @@
 radius = 0.4
 height = 1.8
 
+[sub_resource type="BoxMesh" id="BoxMesh_ceg02"]
+size = Vector3(0.06, 0.06, 0.25)
+
 [node name="Player" type="CharacterBody3D" unique_id=1209915636]
 script = ExtResource("1_ceg02")
 
@@ -19,3 +22,19 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.7, 0)
 
 [node name="InteractRay" type="RayCast3D" parent="Head/Camera3D" unique_id=1360873566]
 target_position = Vector3(0, 0, -2.5)
+
+[node name="GunRay" type="RayCast3D" parent="Head/Camera3D" unique_id=1453368525]
+target_position = Vector3(0, 0, -50)
+
+[node name="GunMesh" type="Node3D" parent="Head/Camera3D" unique_id=489115183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, -0.18, -0.35)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Head/Camera3D/GunMesh" unique_id=848611132]
+mesh = SubResource("BoxMesh_ceg02")
+
+[node name="MuzzleFlash" type="OmniLight3D" parent="Head/Camera3D/GunMesh" unique_id=949614172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.15)
+visible = false
+light_color = Color(1, 0.54901963, 0, 1)
+light_energy = 4.04
+omni_range = 1.5

@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cfrssv3edx466" path="res://scenes/demo/player.tscn" id="1_e2q57"]
 [ext_resource type="PackedScene" uid="uid://b35xjbn8ht43g" path="res://scenes/demo/inventory_ui.tscn" id="2_qhai4"]
 [ext_resource type="PackedScene" uid="uid://cxbqdr082qde2" path="res://scenes/demo/world_item.tscn" id="3_57diq"]
+[ext_resource type="PackedScene" uid="uid://chm1hykyhcbac" path="res://scenes/demo/hud.tscn" id="4_8hyuk"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e0qh4"]
 
@@ -18,26 +19,31 @@ sky = SubResource("Sky_e2q57")
 [node name="Node3D" type="Node3D" unique_id=485765642]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.025260448, 0)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=2079264993]
+[node name="Podlaha" type="CSGBox3D" parent="." unique_id=2079264993]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7002826, 0, -4.289612)
 use_collision = true
 size = Vector3(9.064941, 1, 13.393433)
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1998902453]
+[node name="Skybox" type="WorldEnvironment" parent="." unique_id=1998902453]
 environment = SubResource("Environment_e0qh4")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=554822690]
+[node name="Slunce" type="DirectionalLight3D" parent="." unique_id=554822690]
 transform = Transform3D(1, 0, 0, 0, 0.43036932, 0.90265286, 0, -0.90265286, 0.43036932, 0, 18.715868, 0)
 
 [node name="Player" parent="." unique_id=1209915636 instance=ExtResource("1_e2q57")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4953871, 2.639223, -7.5654125)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1384115821]
+[node name="InventoryLayer" type="CanvasLayer" parent="." unique_id=1384115821]
 
-[node name="InventoryUi" parent="CanvasLayer" unique_id=1407939123 instance=ExtResource("2_qhai4")]
+[node name="InventoryUi" parent="InventoryLayer" unique_id=1407939123 instance=ExtResource("2_qhai4")]
 
 [node name="WorldItem" parent="." unique_id=858186536 instance=ExtResource("3_57diq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5763745, 1.3259294, -0.90781546)
 
 [node name="WorldItem2" parent="." unique_id=467554157 instance=ExtResource("3_57diq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0756, 0.99999976, -1.0889902)
+
+[node name="HUDLayer" type="CanvasLayer" parent="." unique_id=708667360]
+layer = 0
+
+[node name="Hud" parent="HUDLayer" unique_id=439521940 instance=ExtResource("4_8hyuk")]
