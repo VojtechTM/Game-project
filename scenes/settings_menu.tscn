@@ -52,11 +52,12 @@ horizontal_alignment = 1
 [node name="TabContainer" type="TabContainer" parent="CenterContainer/Panel/VBox" unique_id=1748024433]
 layout_mode = 2
 size_flags_vertical = 3
-current_tab = 2
+current_tab = 1
 
 [node name="Controls" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer" unique_id=860940328]
 visible = false
 layout_mode = 2
+alignment = 1
 metadata/_tab_index = 0
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/Panel/VBox/TabContainer/Controls" unique_id=672353932]
@@ -65,9 +66,9 @@ size_flags_vertical = 3
 
 [node name="VBox" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Controls/ScrollContainer" unique_id=100064193]
 layout_mode = 2
+alignment = 1
 
 [node name="Audio" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer" unique_id=259867050]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -137,6 +138,7 @@ custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 
 [node name="Graphics" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer" unique_id=1185652825]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 2
 

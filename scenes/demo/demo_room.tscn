@@ -29,6 +29,7 @@ environment = SubResource("Environment_e0qh4")
 
 [node name="Slunce" type="DirectionalLight3D" parent="." unique_id=554822690]
 transform = Transform3D(1, 0, 0, 0, 0.43036932, 0.90265286, 0, -0.90265286, 0.43036932, 0, 18.715868, 0)
+shadow_enabled = true
 
 [node name="Player" parent="." unique_id=1209915636 instance=ExtResource("1_e2q57")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4953871, 2.639223, -7.5654125)
@@ -60,3 +61,7 @@ size = Vector3(6.080078, 1, 12.876648)
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGBox3D/CSGBox3D" unique_id=1216028660]
 transform = Transform3D(0.032213204, 0.9994832, 0, -0.9994832, 0.032213204, 0, 0, 0, 1, -3.1734, 3.039863, -0.18771505)
 size = Vector3(6.8549805, 1, 12.876648)
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="." unique_id=1950834790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5284178, -3.6348162)
+use_collision = true
