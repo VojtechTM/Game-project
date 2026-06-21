@@ -12,13 +12,14 @@ config_version=5
 
 config/name="echo"
 config/version="0.1"
-run/main_scene="uid://hpyme2kfvekh"
+run/main_scene="uid://deqy118patju0"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Inventory="*uid://oyulwlxderof"
+SettingsManager="*uid://dr047eqrcagti"
 
 [editor]
 

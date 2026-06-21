@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://deqy118patju0"]
+
+[ext_resource type="Script" uid="uid://dfgay1pdf5jp1" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ekxnf"]
+font_size = 52
+
+[sub_resource type="LabelSettings" id="LabelSettings_l6cm7"]
+
+[node name="MainMenu" type="Control" unique_id=2038768096]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l6cm7")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=472103651]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.101960786, 0.18039216, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=294420997]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer" unique_id=269763123]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="CenterContainer/VBox" unique_id=995059948]
+layout_mode = 2
+text = "Echoes"
+label_settings = SubResource("LabelSettings_ekxnf")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CenterContainer/VBox" unique_id=112507707]
+modulate = Color(0.6666667, 0.6666667, 0.6666667, 1)
+layout_mode = 2
+text = "v0.1"
+label_settings = SubResource("LabelSettings_l6cm7")
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBox" unique_id=1946554542]
+layout_mode = 2
+
+[node name="BtnPlay" type="Button" parent="CenterContainer/VBox" unique_id=1583029696]
+custom_minimum_size = Vector2(260, 45)
+layout_mode = 2
+text = "Hrát"
+
+[node name="BtnDemo" type="Button" parent="CenterContainer/VBox" unique_id=269084594]
+custom_minimum_size = Vector2(260, 45)
+layout_mode = 2
+text = "Demo room"
+
+[node name="BtnSettings" type="Button" parent="CenterContainer/VBox" unique_id=1496874571]
+custom_minimum_size = Vector2(260, 45)
+layout_mode = 2
+text = "Nastavení"
+
+[node name="BtnQuit" type="Button" parent="CenterContainer/VBox" unique_id=1617669221]
+custom_minimum_size = Vector2(260, 45)
+layout_mode = 2
+text = "Ukončit"

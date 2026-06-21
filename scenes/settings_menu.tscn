@@ -1,0 +1,217 @@
+[gd_scene format=3 uid="uid://bv3i0d0316w3g"]
+
+[ext_resource type="Script" uid="uid://dft38mfe7jxsa" path="res://scripts/settings_menu.gd" id="1_05p07"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_05p07"]
+font_size = 28
+
+[node name="SettingsMenu" type="Control" unique_id=789028711]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_05p07")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=907880731]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101960786, 0.101960786, 0.18039216, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=581321493]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="CenterContainer" unique_id=1430101726]
+custom_minimum_size = Vector2(720, 520)
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer/Panel" unique_id=888343587]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBox" unique_id=112526890]
+layout_mode = 2
+text = "Nastavení"
+label_settings = SubResource("LabelSettings_05p07")
+horizontal_alignment = 1
+
+[node name="TabContainer" type="TabContainer" parent="CenterContainer/Panel/VBox" unique_id=1748024433]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 2
+
+[node name="Controls" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer" unique_id=860940328]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/Panel/VBox/TabContainer/Controls" unique_id=672353932]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Controls/ScrollContainer" unique_id=100064193]
+layout_mode = 2
+
+[node name="Audio" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer" unique_id=259867050]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Audio" unique_id=1464480254]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="Master" type="HBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox" unique_id=720594584]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox/Master" unique_id=1833197284]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Hlasitost"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox/Master" unique_id=308972754]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="Music" type="HBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox" unique_id=920117454]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox/Music" unique_id=1071713797]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Hudba"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox/Music" unique_id=99320205]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="SFX" type="HBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox" unique_id=1371575027]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox/SFX" unique_id=943021900]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "SFX"
+horizontal_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox/SFX" unique_id=518137145]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="Output" type="HBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox" unique_id=1001148997]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox/Output" unique_id=1886618451]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Výstup"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox/Output" unique_id=829612576]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="Graphics" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer" unique_id=1185652825]
+layout_mode = 2
+metadata/_tab_index = 2
+
+[node name="VBox" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Graphics" unique_id=1974948960]
+layout_mode = 2
+theme_override_constants/separation = 14
+
+[node name="WindowMode" type="HBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Graphics/VBox" unique_id=2016748519]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBox/TabContainer/Graphics/VBox/WindowMode" unique_id=1830187902]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Režim okna"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="CenterContainer/Panel/VBox/TabContainer/Graphics/VBox/WindowMode" unique_id=1485702160]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+alignment = 1
+item_count = 3
+popup/item_0/text = "Okno"
+popup/item_0/id = 0
+popup/item_1/text = "Celá obrazovka"
+popup/item_1/id = 1
+popup/item_2/text = "Maximalizované"
+popup/item_2/id = 2
+
+[node name="Resolution" type="HBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Graphics/VBox" unique_id=2061825974]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBox/TabContainer/Graphics/VBox/Resolution" unique_id=1503233966]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Rozlišení"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="CenterContainer/Panel/VBox/TabContainer/Graphics/VBox/Resolution" unique_id=64689520]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="VSync" type="HBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Graphics/VBox" unique_id=68807669]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBox/TabContainer/Graphics/VBox/VSync" unique_id=543338156]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "VSync"
+horizontal_alignment = 1
+
+[node name="CheckButton" type="CheckButton" parent="CenterContainer/Panel/VBox/TabContainer/Graphics/VBox/VSync" unique_id=162190493]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="MSAA" type="HBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Graphics/VBox" unique_id=443909396]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="CenterContainer/Panel/VBox/TabContainer/Graphics/VBox/MSAA" unique_id=1385552869]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "MSAA"
+horizontal_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="CenterContainer/Panel/VBox/TabContainer/Graphics/VBox/MSAA" unique_id=26095868]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+item_count = 3
+popup/item_0/text = "2x"
+popup/item_0/id = 0
+popup/item_1/text = "4x"
+popup/item_1/id = 1
+popup/item_2/text = "8x"
+popup/item_2/id = 2
+
+[node name="BtnBack" type="Button" parent="CenterContainer/Panel/VBox" unique_id=1864439254]
+layout_mode = 2
+text = "Zpět"
