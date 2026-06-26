@@ -5,6 +5,8 @@
 [sub_resource type="LabelSettings" id="LabelSettings_05p07"]
 font_size = 28
 
+[sub_resource type="LabelSettings" id="LabelSettings_cr101"]
+
 [node name="SettingsMenu" type="Control" unique_id=789028711]
 layout_mode = 3
 anchors_preset = 15
@@ -52,23 +54,28 @@ horizontal_alignment = 1
 [node name="TabContainer" type="TabContainer" parent="CenterContainer/Panel/VBox" unique_id=1748024433]
 layout_mode = 2
 size_flags_vertical = 3
-current_tab = 1
+current_tab = 0
 
-[node name="Controls" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer" unique_id=860940328]
-visible = false
+[node name="Controls" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer" unique_id=1094104228]
 layout_mode = 2
-alignment = 1
 metadata/_tab_index = 0
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/Panel/VBox/TabContainer/Controls" unique_id=672353932]
+[node name="m" type="MarginContainer" parent="CenterContainer/Panel/VBox/TabContainer/Controls" unique_id=4896515]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_right = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer/Panel/VBox/TabContainer/Controls/m" unique_id=672353932]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBox" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Controls/ScrollContainer" unique_id=100064193]
+[node name="VBox" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer/Controls/m/ScrollContainer" unique_id=100064193]
 layout_mode = 2
 alignment = 1
 
 [node name="Audio" type="VBoxContainer" parent="CenterContainer/Panel/VBox/TabContainer" unique_id=259867050]
+visible = false
 layout_mode = 2
 metadata/_tab_index = 1
 
@@ -84,6 +91,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 text = "Hlasitost"
+label_settings = SubResource("LabelSettings_cr101")
 horizontal_alignment = 1
 
 [node name="HSlider" type="HSlider" parent="CenterContainer/Panel/VBox/TabContainer/Audio/VBox/Master" unique_id=308972754]

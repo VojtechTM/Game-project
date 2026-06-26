@@ -1,16 +1,20 @@
+# scripts/world_item.gd
 extends StaticBody3D
 
-@export var item_name: String = "Předmět"
-@export var item_description: String = ""
+@export var item: Item = null
+@export var quantity: int = 1
 
 @onready var label: Label3D = $Label3D
 
 func _ready() -> void:
-	label.text = "[E] " + item_name
+	if item:
+		label.text = "[E] %s" % item.display_name
+	else:
+		label.text = "[E] ?"
 
 func interact(_player: Node) -> void:
-	Inventory.add_item({
-		"name": item_name,
-		"description": item_description,
-	})
+	if not item:
+		push_warning("WorldItem nemá přiřazený item resource!")
+		return
+	Inventory.add_item(item, quantity)
 	queue_free()

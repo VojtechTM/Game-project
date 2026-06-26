@@ -30,7 +30,7 @@ var _rebind_buttons: Dictionary = {}
 	$CenterContainer/Panel/VBox/TabContainer
 
 @onready var controls_list: VBoxContainer = \
-	$CenterContainer/Panel/VBox/TabContainer/Controls/ScrollContainer/VBox
+	$CenterContainer/Panel/VBox/TabContainer/Controls/m/ScrollContainer/VBox
 
 @onready var slider_master: HSlider = \
 	$CenterContainer/Panel/VBox/TabContainer/Audio/VBox/Master/HSlider

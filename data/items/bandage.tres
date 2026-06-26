@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="MedicalItem" format=3 uid="uid://v4y6742x55vu"]
+
+[ext_resource type="Script" uid="uid://cv1ucd6s2r47" path="res://resources/items/medical_item.gd" id="1_fhnjs"]
+[ext_resource type="Texture2D" uid="uid://cvlpdmp7srsff" path="res://assets/icons/bandage-icon-simple-illustration-free-vector-1646762156.jpg" id="1_wgyej"]
+
+[resource]
+script = ExtResource("1_fhnjs")
+stop_bleeding = true
+id = &"1"
+display_name = "Bandage"
+description = "Stops bleeding and heals a bit"
+icon = ExtResource("1_wgyej")
+max_stack = 3
+metadata/_custom_type_script = "uid://cv1ucd6s2r47"
