@@ -39,7 +39,7 @@ theme_override_constants/separation = 12
 
 [node name="Label" type="Label" parent="CenterContainer/VBox" unique_id=995059948]
 layout_mode = 2
-text = "Echoes"
+text = "Echoes of space"
 label_settings = SubResource("LabelSettings_ekxnf")
 horizontal_alignment = 1
 
